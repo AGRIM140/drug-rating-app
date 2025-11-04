@@ -248,6 +248,7 @@ if page == "Explain":
             fi = pd.Series(importances, index=feat_names).sort_values(ascending=True)
 
             fig, ax = plt.subplots(figsize=(8, 4))
+            fig.savefig("plot.png")
             fi.plot(kind="barh", ax=ax)
             ax.set_title("Feature importances")
             st.pyplot(fig)
@@ -366,5 +367,6 @@ if page == "About":
 # -------------------------
 # End
 # -------------------------
+
 
 
