@@ -272,7 +272,7 @@ if page == "Explain":
                 st.info("No dataset available to compute SHAP sample.")
         except Exception as e:
             st.info("SHAP unavailable or failed to run. Feature importances above are shown instead.")
-            st.debug and st.write(str(e))
+            st.error(str(e))
 
 # -------------------------
 # ANALYTICS: quick charts from cleaned dataset
@@ -366,4 +366,5 @@ if page == "About":
 # -------------------------
 # End
 # -------------------------
+
 
